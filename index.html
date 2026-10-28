@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inclusive Futures Lab | UAlbany</title>
+  <meta name="description" content="The Inclusive Futures Lab researches how assistive and emerging technologies, including AI, can safely and ethically support people with intellectual and developmental disabilities and the people who support them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #12263a;
+      --paper: #ffffff;
+      --wash: #eef4f8;
+      --accent: #0a6b6f;
+      --accent-dark: #074a4d;
+      --focus: #ffc533;
+      --rule: #b9c9d6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ink: #e8eff5;
+        --paper: #0e1a26;
+        --wash: #152638;
+        --accent: #5fd0d4;
+        --accent-dark: #8fe3e6;
+        --rule: #35506a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:hover { color: var(--accent-dark); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .skip { position: absolute; left: -999px; top: 0; background: var(--paper); color: var(--ink); padding: .75rem 1rem; z-index: 10; }
+    .skip:focus { left: 1rem; top: 1rem; }
+
+    .wrap { max-width: 66rem; margin: 0 auto; padding: 0 1.25rem; }
+
+    header.site { border-bottom: 1px solid var(--rule); }
+    header.site .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; padding-top: 1rem; padding-bottom: 1rem; }
+    .brand { font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; }
+    nav ul { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--ink); }
+    nav a:hover { color: var(--accent); }
+
+    .hero { background: var(--wash); padding: 4rem 0 4.5rem; }
+    .hero h1 { font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.1; margin: 0 0 1.25rem; max-width: 18ch; letter-spacing: -.01em; }
+    .hero p { max-width: 38rem; margin: 0 0 1.75rem; font-size: 1.25rem; }
+    .btn { display: inline-block; background: var(--accent); color: var(--paper); font-weight: 700; padding: .8rem 1.4rem; border-radius: .4rem; text-decoration: none; }
+    .btn:hover { background: var(--accent-dark); color: var(--paper); }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #0e1a26; } :root:not([data-theme="light"]) .btn:hover { color: #0e1a26; } }
+
+    section.band { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    section.band > .wrap { display: grid; gap: 1.25rem 3rem; }
+    section.band h2 { font-size: 1.5rem; line-height: 1.25; margin: 0; }
+    section.band .body > :first-child { margin-top: 0; }
+    section.band .body > :last-child { margin-bottom: 0; }
+    @media (min-width: 52rem) {
+      section.band > .wrap { grid-template-columns: 14rem minmax(0, 1fr); }
+      section.band h2 { position: sticky; top: 1.5rem; align-self: start; }
+    }
+    .body { max-width: 40rem; }
+    .body ul { padding-left: 1.25rem; }
+    .body li { margin-bottom: .5rem; }
+
+    dl.focus { margin: 0; }
+    dl.focus dt { font-weight: 700; margin-top: 1.5rem; }
+    dl.focus dt:first-child { margin-top: 0; }
+    dl.focus dd { margin: .25rem 0 0; }
+
+    .why { background: var(--wash); }
+    .why p { font-size: 1.25rem; }
+
+    footer { padding: 2.5rem 0 3rem; }
+    footer p { margin: 0 0 .5rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="#top">Inclusive Futures Lab</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#focus">Focus areas</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#collaborate">Collaborate</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero" id="top">
+      <div class="wrap">
+        <h1>Safe, ethical technology for people with IDD, from birth to death</h1>
+        <p>We research how assistive and emerging technologies, including AI, can support people with intellectual and developmental disabilities and the people who support them.</p>
+        <a class="btn" href="#collaborate">Work with the lab</a>
+      </div>
+    </div>
+
+    <section class="band" id="mission" aria-labelledby="mission-h">
+      <div class="wrap">
+        <h2 id="mission-h">Mission</h2>
+        <div class="body">
+          <p>The Inclusive Futures Lab studies how assistive and emerging technologies, including artificial intelligence (AI), can safely and ethically support people with intellectual and developmental disabilities (IDD) and the people who support them.</p>
+          <p>We develop technology training, cybersecurity awareness, and accessible technology practices for individuals with IDD, their families, teachers, direct support professionals, clinicians, and service providers.</p>
+          <p>Our work follows a person across the whole lifespan: early intervention, school years, the transition to adulthood, employment and day services, and aging.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="focus" aria-labelledby="focus-h">
+      <div class="wrap">
+        <h2 id="focus-h">Focus areas</h2>
+        <div class="body">
+          <dl class="focus">
+            <dt>Assistive and accessible technology</dt>
+            <dd>Matching tools, such as communication apps and AAC, to each person’s needs and abilities.</dd>
+            <dt>Cybersecurity and digital literacy</dt>
+            <dd>Helping people with IDD and their supporters protect personal information and avoid scams.</dd>
+            <dt>Ethical AI</dt>
+            <dd>Responsible, transparent, and person-centered use of AI in support, education, and care.</dd>
+            <dt>Emerging technology</dt>
+            <dd>Evaluating tools such as VR/AR, smart glasses, and wearables for people with IDD.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="research" aria-labelledby="research-h">
+      <div class="wrap">
+        <h2 id="research-h">Research</h2>
+        <div class="body">
+          <dl class="focus">
+            <dt>Technology training for supporters</dt>
+            <dd>We develop practical training for direct support professionals, teachers, families, and other staff, and study how they carry what they learn over to the people they support.</dd>
+            <dt>Safe technology use across the lifespan</dt>
+            <dd>We design digital literacy and cybersecurity guidance suited to each life stage, from children to older adults with IDD.</dd>
+            <dt>Ethical AI in disability services</dt>
+            <dd>We identify guidelines for privacy, consent, and bias when AI is used with people with IDD.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="band why" id="why" aria-labelledby="why-h">
+      <div class="wrap">
+        <h2 id="why-h">Why it matters</h2>
+        <div class="body">
+          <p>People with IDD, and the staff and families who support them, often have the least access to technology training. They still face real risks, including scams, loss of privacy, and misuse of AI.</p>
+          <p>We build practical, accessible training so technology can improve independence, communication, and quality of life from birth to death.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="impact" aria-labelledby="impact-h">
+      <div class="wrap">
+        <h2 id="impact-h">Impact on education</h2>
+        <div class="body">
+          <ul>
+            <li>Teach safe habits, such as password and personal information security and scam spotting.</li>
+            <li>Raise awareness of accessible and assistive technologies, including communication apps.</li>
+            <li>Prepare future support professionals and educators to use technology and AI responsibly.</li>
+            <li>Build training that works for staff and families at every stage of a person’s life.</li>
+            <li>Foster partnerships between higher education and organizations that serve people with IDD.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="collaborate" aria-labelledby="collaborate-h">
+      <div class="wrap">
+        <h2 id="collaborate-h">Collaborate with us</h2>
+        <div class="body">
+          <p>The lab welcomes collaborators from the College of Emergency Preparedness, Homeland Security and Cybersecurity (CEHC) and its partners.</p>
+          <dl class="focus">
+            <dt>UAlbany research labs</dt>
+            <dd>
+              <ul>
+                <li>Develop and test technology training for direct support professionals, teachers, and families.</li>
+                <li>Evaluate assistive and accessible technologies with people with IDD.</li>
+                <li>Study how supporters turn training into everyday practice.</li>
+                <li>Examine privacy, consent, and cybersecurity for people with IDD.</li>
+              </ul>
+            </dd>
+            <dt>Disability service organizations and schools</dt>
+            <dd>Pilot training and technology with the people you support and your staff.</dd>
+            <dt>Students</dt>
+            <dd>The lab is open to undergraduate and graduate students interested in assistive technology, accessibility, cybersecurity, and ethical AI. No prior research experience is required.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="team" aria-labelledby="team-h">
+      <div class="wrap">
+        <h2 id="team-h">Lab members</h2>
+        <div class="body">
+          <dl class="focus">
+            <dt>Crystal Jones-Howe</dt>
+            <dd>Lab Director and Adjunct Instructor, Department of Cybersecurity, UAlbany</dd>
+            <dt>Maya Chen</dt>
+            <dd>Ph.D. student, Informatics, UAlbany</dd>
+            <dt>Jordan Rivera</dt>
+            <dd>Undergraduate student, Cybersecurity, UAlbany</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap">
+      <p><strong>Contact the lab</strong></p>
+      <p>Email: <a href="mailto:CJones-Howe@albany.edu">CJones-Howe@albany.edu</a></p>
+      <p>Location: Online</p>
+    </div>
+  </footer>
+</body>
+</html>
