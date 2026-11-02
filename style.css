@@ -69,8 +69,8 @@ header.site nav a:focus-visible {
 /* Corkboard and post-it links */
 /* Corkboard */
 .home-board {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 24px;
     padding: 32px;
     background-color: #C8A26B;
@@ -80,7 +80,7 @@ header.site nav a:focus-visible {
 .post-it {
     display: block;
     box-sizing: border-box;
-    width: 200px;
+    width: 100px;
     max-width: 100%;
     min-height: 200px;
     padding: 20px;
@@ -99,7 +99,10 @@ header.site nav a:focus-visible {
 .post-it p {
     margin: 0;
 }
-
+/* Tilt every other note in the opposite direction */
+.post-it:nth-child(even) {
+    transform: rotate(2deg);
+}
 /* Straighten the note when hovered or focused */
 .post-it:hover,
 .post-it:focus-visible {
