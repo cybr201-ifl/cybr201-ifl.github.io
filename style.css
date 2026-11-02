@@ -67,6 +67,49 @@ header.site nav a:focus-visible {
 
 
 /* Corkboard and post-it links */
+/* Corkboard */
+.home-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 32px;
+    background-color: #C8A26B;
+}
+
+/* Individual post-it */
+.post-it {
+    display: block;
+    box-sizing: border-box;
+    width: 200px;
+    max-width: 100%;
+    min-height: 200px;
+    padding: 20px;
+    background-color: #FFE770;
+    color: #12263A;
+    text-decoration: none;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+}
+
+/* Text spacing inside the note */
+.post-it h3 {
+    margin: 0 0 12px;
+}
+
+.post-it p {
+    margin: 0;
+}
+
+/* Straighten the note when hovered or focused */
+.post-it:hover,
+.post-it:focus-visible {
+    transform: rotate(0deg);
+}
+
+.post-it:focus-visible {
+    outline: 3px solid #12263A;
+    outline-offset: 4px;
+}
 
 
 /* Footer */
