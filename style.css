@@ -68,12 +68,23 @@ header.site nav a:focus-visible {
 
 /* Corkboard and post-it links */
 /* Corkboard */
+/* Corkboard background and frame */
 .home-board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 24px;
     padding: 32px;
+
     background-color: #C8A26B;
+    background-image: url("images/cork.png");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+
+    border: 12px solid #76512E;
+
+    box-shadow:
+        inset 0 0 12px rgba(0, 0, 0, 0.2),
+        0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Individual post-it */
