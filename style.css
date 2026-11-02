@@ -4,6 +4,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #FFFDF8;
     color: #12263A;
+    line-height: 1.6;
+}
+
+/*Main Content*/
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 /* Header and navigation */
