@@ -24,6 +24,45 @@ header.site {
     border-bottom: 2px solid #C8A26B;
 }
 
+/* Arrange the header contents */
+header.site .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Lab name */
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #12263A;
+    text-decoration: none;
+}
+
+/* Arrange the navigation links */
+header.site nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation link appearance */
+header.site nav a {
+    color: #12263A;
+    text-decoration: none;
+}
+
+/* Highlight links when hovered or focused */
+header.site nav a:hover,
+header.site nav a:focus-visible {
+    text-decoration: underline;
+}
+
 /* Homepage introduction */
 
 
