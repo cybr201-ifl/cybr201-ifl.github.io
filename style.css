@@ -110,7 +110,26 @@ header.site nav a:focus-visible {
     outline: 3px solid #12263A;
     outline-offset: 4px;
 }
+/* Individual post-it colors */
+.post-it.yellow {
+    background-color: #FFE770;
+}
 
+.post-it.red {
+    background-color: #FFB3AB;
+}
+
+.post-it.green {
+    background-color: #C7E9B0;
+}
+
+.post-it.blue {
+    background-color: #BBDDF2;
+}
+
+.post-it.purple {
+    background-color: #DCC7F0;
+}
 
 /* Footer */
 
