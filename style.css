@@ -14,6 +14,22 @@ body {
     padding: 0 24px;
 }
 
+/* Mission text and photo */
+.mission-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 32px;
+    align-items: center;
+}
+
+
+.mission-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
 /* Header and navigation */
 header.site {
     position: sticky;
@@ -156,3 +172,10 @@ header.site nav a:focus-visible {
 
 
 /* Mobile adjustments */
+
+/* Stack the text and photo on smaller screens */
+@media (max-width: 750px) {
+    .mission-layout {
+        grid-template-columns: 1fr;
+    }
+}
