@@ -31,6 +31,12 @@ body {
     border-radius: 6px;
 }
 
+.mission-text {
+    background-color: #E8EDF2;
+    color: #12263A;
+}
+    
+
 /* Header and navigation */
 header.site {
     position: sticky;
