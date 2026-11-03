@@ -105,7 +105,42 @@ header.site nav a:focus-visible {
 }
 
 /* Homepage introduction */
+.welcome-title {
+    margin: 40px 0;
+    text-align: center;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+}
 
+.welcome-title span {
+    display: block;
+    animation: welcome-in 0.8s ease-out both;
+}
+
+.welcome-title .welcome-lab {
+    margin-top: 12px;
+    font-size: 0.75em;
+    animation-delay: 0.8s;
+}
+
+@keyframes welcome-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Show the heading immediately for reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    .welcome-title span {
+        animation: none;
+    }
+}
 
 /* Corkboard and post-it links */
 /* Corkboard */
