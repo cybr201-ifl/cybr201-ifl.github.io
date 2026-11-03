@@ -185,7 +185,7 @@ header.site nav a:focus-visible {
 .noticeboard .mission-text {
     position: relative;
     padding-top: 36px;
-    transform: rotate(-0.5deg);
+    transform: none;
 }
 
 /* Decorative pin */
