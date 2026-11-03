@@ -26,9 +26,16 @@ body {
 
 .mission-photo {
     display: block;
+    box-sizing: border-box;
     width: 100%;
     height: auto;
-    border-radius: 6px;
+
+    border: 10px solid #FFFFFF;
+    border-bottom-width: 32px;
+    border-radius: 0;
+
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
 }
 
 .mission-text {
@@ -103,10 +110,8 @@ header.site nav a:focus-visible {
 /* Corkboard and post-it links */
 /* Corkboard */
 /* Corkboard background and frame */
-.home-board {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
+/* One large corkboard around the homepage content */
+.noticeboard {
     padding: 32px;
 
     background-color: #C8A26B;
@@ -119,6 +124,58 @@ header.site nav a:focus-visible {
     box-shadow:
         inset 0 0 12px rgba(0, 0, 0, 0.2),
         0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Inner sections use the outer board's spacing */
+.noticeboard .wrap {
+    max-width: none;
+    padding: 0;
+}
+
+/* Space between the sections */
+.noticeboard > section + section {
+    margin-top: 28px;
+}
+
+/* Paper backgrounds to keep the text readable */
+.noticeboard .mission-text,
+.noticeboard #why .wrap {
+    background-color: #FFFFFF;
+    padding: 24px;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* Position the Mission paper and leave space for its pin */
+.noticeboard .mission-text {
+    position: relative;
+    padding-top: 36px;
+    transform: rotate(-0.5deg);
+}
+
+/* Decorative pin */
+.noticeboard .mission-text::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+    background-color: #46166B;
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        1px 2px 3px rgba(0, 0, 0, 0.3),
+        inset 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+/* Arrange the four post-it links */
+.home-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
 }
 
 /* Individual post-it */
