@@ -61,3 +61,132 @@
 
             <article class="bio-card">
               <div class="bio-initials" aria-hidden="true">CJ</div>
+              <h3>Crystal Jones-Howe</h3>
+              <p class="bio-role">Lab Director</p>
+              <p>Adjunct Instructor in the Department of Cybersecurity at UAlbany. Crystal leads the lab's work on technology training, cybersecurity awareness, and ethical AI for people with intellectual and developmental disabilities (IDD) and the people who support them.</p>
+              <p class="bio-email">
+                <a href="mailto:CJones-Howe@albany.edu">CJones-Howe@albany.edu</a>
+              </p>
+            </article>
+
+            <article class="bio-card">
+              <div class="bio-initials" aria-hidden="true">MC</div>
+              <h3>Maya Chen</h3>
+              <p class="bio-role">Ph.D. Student, Informatics</p>
+              <p>Maya is a doctoral student in Informatics at UAlbany and a member of the lab's research team.</p>
+            </article>
+
+            <article class="bio-card">
+              <div class="bio-initials" aria-hidden="true">JR</div>
+              <h3>Jordan Rivera</h3>
+              <p class="bio-role">Undergraduate Student, Cybersecurity</p>
+              <p>Jordan is an undergraduate Cybersecurity student at UAlbany and a member of the lab's research team.</p>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Contact form and contact details -->
+        <section id="message" aria-labelledby="message-heading">
+          <h2 id="message-heading" class="board-label">Send Us a Message</h2>
+
+          <div class="contact-layout">
+
+            <!-- Opens the visitor's email app; replace action with a form service if the site gets one -->
+            <form class="contact-paper"
+                  action="mailto:CJones-Howe@albany.edu"
+                  method="post"
+                  enctype="text/plain">
+
+              <p class="form-note">All fields marked <strong>(required)</strong> must be filled in.</p>
+
+              <div class="field">
+                <label for="name">Your name <span class="req">(required)</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Your email <span class="req">(required)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email"
+                       aria-describedby="email-hint" required>
+                <p class="hint" id="email-hint">We will only use this to reply to you.</p>
+              </div>
+
+              <div class="field">
+                <label for="role">Which best describes you?</label>
+                <select id="role" name="role">
+                  <option value="">Choose one</option>
+                  <option>Person with IDD</option>
+                  <option>Family member</option>
+                  <option>Teacher</option>
+                  <option>Direct support professional</option>
+                  <option>Clinician or service provider</option>
+                  <option>Student</option>
+                  <option>Researcher or partner organization</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <fieldset class="field">
+                <legend>What is your message about?</legend>
+                <div class="choice">
+                  <input type="radio" id="topic-training" name="topic" value="Technology training" checked>
+                  <label for="topic-training">Technology training</label>
+                </div>
+                <div class="choice">
+                  <input type="radio" id="topic-research" name="topic" value="Research collaboration">
+                  <label for="topic-research">Research collaboration</label>
+                </div>
+                <div class="choice">
+                  <input type="radio" id="topic-students" name="topic" value="Joining the lab as a student">
+                  <label for="topic-students">Joining the lab as a student</label>
+                </div>
+                <div class="choice">
+                  <input type="radio" id="topic-other" name="topic" value="Something else">
+                  <label for="topic-other">Something else</label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="message-text">Your message <span class="req">(required)</span></label>
+                <textarea id="message-text" name="message" rows="6"
+                          aria-describedby="message-hint" required></textarea>
+                <p class="hint" id="message-hint">Please do not include passwords, account numbers, or medical information.</p>
+              </div>
+
+              <button type="submit" class="send-button">Send message</button>
+            </form>
+
+            <!-- Contact details on a post-it -->
+            <aside class="post-it blue contact-card" aria-labelledby="details-heading">
+              <h3 id="details-heading">Other ways to reach us</h3>
+              <p><strong>Location:</strong> Online</p>
+              <p><strong>Email:</strong><br>
+                <a href="mailto:CJones-Howe@albany.edu">CJones-Howe@albany.edu</a>
+              </p>
+              <p>Students interested in joining the lab are welcome. No prior research experience is required.</p>
+            </aside>
+
+          </div>
+        </section>
+
+      </div>
+      <!-- Corkboard frame ends here -->
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        <strong>Inclusive Futures Lab</strong><br>
+        University at Albany
+      </p>
+      <a href="#">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
