@@ -317,3 +317,256 @@ header.site nav a:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+/* Contact Us page */
+/* Paper labels for section headings on the corkboard */
+.board-label {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 6px 16px;
+    background-color: #FFFDF8;
+    color: #12263A;
+    font-size: 24px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15);
+    transform: rotate(-1deg);
+}
+
+/* Arrange the bio cards */
+.bio-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+/* Individual bio card (index card) */
+.bio-card {
+    position: relative;
+    box-sizing: border-box;
+    padding: 36px 20px 20px;
+    background-color: #FFFFFF;
+    border-top: 6px solid #C8A26B;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg);
+}
+
+/* Tilt every other card in the opposite direction */
+.bio-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+/* Pin on each card */
+.bio-card::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+    background-color: #46166B;
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        1px 2px 3px rgba(0, 0, 0, 0.3),
+        inset 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Initials circle in place of a photo */
+.bio-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    background-color: #E8EDF2;
+    color: #12263A;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.bio-card h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.bio-role {
+    margin: 4px 0 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #46166B;
+}
+
+.bio-card p {
+    margin: 0 0 12px;
+}
+
+.bio-email {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Form and contact post-it side by side */
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 32px;
+    align-items: start;
+}
+
+/* Paper behind the form */
+.contact-paper {
+    position: relative;
+    padding: 36px 24px 24px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Pin on the form paper */
+.contact-paper::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+    background-color: #46166B;
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        1px 2px 3px rgba(0, 0, 0, 0.3),
+        inset 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.form-note {
+    margin: 0 0 20px;
+}
+
+/* Space between form fields */
+.field {
+    margin: 0 0 20px;
+}
+
+/* Labels sit above their fields */
+.field > label,
+.field legend {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.req {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+/* Text boxes, dropdown and message box */
+.field input[type="text"],
+.field input[type="email"],
+.field select,
+.field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 18px;
+    color: #12263A;
+    background-color: #FFFDF8;
+    border: 2px solid #12263A;
+    border-radius: 4px;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+/* Clear focus ring on every field */
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible,
+.send-button:focus-visible {
+    outline: 3px solid #46166B;
+    outline-offset: 2px;
+}
+
+/* Helper text under a field */
+.hint {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: #3D4F61;
+}
+
+/* Radio button group */
+fieldset.field {
+    border: 0;
+    padding: 0;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+}
+
+.choice input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: #46166B;
+}
+
+/* Send button */
+.send-button {
+    min-height: 48px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFDF8;
+    background-color: #12263A;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #46166B;
+}
+
+/* Contact details post-it */
+.contact-card {
+    min-height: 0;
+}
+
+.contact-card p + p {
+    margin-top: 12px;
+}
+
+.contact-card a {
+    color: #12263A;
+    overflow-wrap: anywhere;
+}
+
+/* Stack the form and post-it on smaller screens */
+@media (max-width: 750px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Keep cards still for reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    .bio-card,
+    .bio-card:nth-child(even),
+    .board-label {
+        transform: none;
+    }
+}
