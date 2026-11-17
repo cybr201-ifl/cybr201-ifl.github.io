@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
 }
 
-/*Main Content*/
+/* Main content */
 .wrap {
     max-width: 1100px;
     margin: 0 auto;
@@ -20,9 +20,7 @@ body {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 32px;
     align-items: center;
-    
 }
-
 
 .mission-photo {
     display: block;
@@ -38,13 +36,30 @@ body {
     transform: rotate(2deg);
 }
 
+/* The figure holds the white frame and leaves room for its pin */
+.mission-photo-card {
+    margin: 0;
+    padding: 36px 10px 28px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
+}
+
+/* Avoid adding a second frame or tilt to the image inside */
+.mission-photo-card .mission-photo {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
 .mission-text {
     background-color: #E8EDF2;
     color: #12263A;
     text-align: center;
     border-radius: 15px;
 }
-    
+
 
 /* Header and navigation */
 header.site {
@@ -104,7 +119,16 @@ header.site nav a:focus-visible {
     text-decoration: underline;
 }
 
+
 /* Homepage introduction */
+
+/* Space above and below the welcome content */
+.welcome {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    text-align: center;
+}
+
 .welcome-title {
     margin: 40px 0;
     text-align: center;
@@ -112,15 +136,63 @@ header.site nav a:focus-visible {
     line-height: 1.2;
 }
 
+.welcome .welcome-title {
+    margin: 0;
+}
+
+/* Animate the two heading lines */
 .welcome-title span {
     display: block;
     animation: welcome-in 0.8s ease-out both;
 }
 
+/* Style the first line: "Welcome" */
+.welcome-title > span:first-child {
+    color: #46166B;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Delay the lab name until after "Welcome" appears */
 .welcome-title .welcome-lab {
     margin-top: 12px;
-    font-size: 0.75em;
+    font-size: 0.85em;
     animation-delay: 0.8s;
+}
+
+/* Limit the paragraph width for easier reading */
+.welcome-intro {
+    max-width: 620px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+/* Arrange the topic labels and let them wrap on phones */
+.welcome-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.welcome-topics li {
+    padding: 6px 12px;
+    background-color: #F6E9C7;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.welcome-topics li:nth-child(2) {
+    background-color: #E5F0DA;
+}
+
+.welcome-topics li:nth-child(3) {
+    background-color: #DEEDF7;
 }
 
 @keyframes welcome-in {
@@ -142,9 +214,9 @@ header.site nav a:focus-visible {
     }
 }
 
+
 /* Corkboard and post-it links */
-/* Corkboard */
-/* Corkboard background and frame */
+
 /* One large corkboard around the homepage content */
 .noticeboard {
     padding: 32px;
@@ -181,31 +253,46 @@ header.site nav a:focus-visible {
     border-radius: 0;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
 }
-/* Position the Mission paper and leave space for its pin */
+
+/* Leave space for the Mission pin and keep its text straight */
 .noticeboard .mission-text {
     position: relative;
     padding-top: 36px;
     transform: none;
 }
 
-/* Decorative pin */
-.noticeboard .mission-text::before {
+/* Leave space for the Why it matters pin */
+.noticeboard #why .wrap {
+    padding-top: 36px;
+}
+
+/* Each pinned element becomes the reference point for its pin */
+.noticeboard .pinned {
+    position: relative;
+}
+
+/* Draw the same decorative pin on all three pieces */
+.noticeboard .pinned::before {
     content: "";
     position: absolute;
     top: 12px;
     left: 50%;
+    z-index: 1;
 
     width: 12px;
     height: 12px;
     background-color: #46166B;
     border-radius: 50%;
 
+    /* Center the pin horizontally */
     transform: translateX(-50%);
 
+    /* Add depth and a small highlight */
     box-shadow:
         1px 2px 3px rgba(0, 0, 0, 0.3),
         inset 2px 2px 2px rgba(255, 255, 255, 0.5);
 }
+
 /* Arrange the four post-it links */
 .home-board {
     display: grid;
@@ -252,10 +339,12 @@ header.site nav a:focus-visible {
 .post-it p {
     margin: 0;
 }
+
 /* Tilt every other note in the opposite direction */
 .post-it:nth-child(even) {
     transform: rotate(2deg);
 }
+
 /* Straighten the note when hovered or focused */
 .post-it:hover,
 .post-it:focus-visible {
@@ -266,6 +355,7 @@ header.site nav a:focus-visible {
     outline: 3px solid #12263A;
     outline-offset: 4px;
 }
+
 /* Individual post-it colors */
 .post-it.yellow {
     background-color: #FFE770;
@@ -284,15 +374,16 @@ header.site nav a:focus-visible {
 }
 
 
-
 /* Footer */
 .site-footer {
     margin-top: 40px;
-    padding: 24px 0;
-    background-color: #12263A;
+    padding: 32px 0;
+    background-color: #331348;
+    border-top: 4px solid #C8A26B;
     color: #FFFDF8;
 }
 
+/* Arrange the lab information and return link */
 .site-footer .wrap {
     display: flex;
     justify-content: space-between;
@@ -309,6 +400,33 @@ header.site nav a:focus-visible {
     color: inherit;
 }
 
+.footer-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-university {
+    color: #E8DEED;
+}
+
+/* Make the return link look like an outlined button */
+.back-to-top {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #BBA5C9;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Give mouse and keyboard users visible feedback */
+.site-footer .back-to-top:hover,
+.site-footer .back-to-top:focus-visible {
+    background-color: #FFFDF8;
+    color: #331348;
+    text-decoration: underline;
+}
+
+
 /* Mobile adjustments */
 
 /* Stack the text and photo on smaller screens */
@@ -317,7 +435,10 @@ header.site nav a:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+
 /* Contact Us page */
+
 /* Paper labels for section headings on the corkboard */
 .board-label {
     display: inline-block;
